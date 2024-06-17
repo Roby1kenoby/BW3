@@ -1,0 +1,75 @@
+main{
+    background-image: linear-gradient(to bottom, #262626, #1e1e1e, #171717, #0d0d0d, #000000);
+}
+
+.container{
+    color: white;
+}
+
+.authorSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-content: center;
+}
+
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.cardSpacer{
+    padding: 1em;
+}
+
+.cardWrapper{
+    padding: 1em;
+    /* background-color: #1E1A1A; */
+    /* background-color: #1E1A1A; */
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.cardWrapper:hover{
+    background-color: #1E1A1A;
+}
+
+.card{
+    border-radius: 0.5em;
+    border: none;
+    background-color: transparent;
+}
+
+.imgWrapper{
+    /* background-color: #1E1A1A; */
+    width: 100%;
+}
+
+.card img{
+    border-radius: 0.5em;
+}
+
+
+.card-body{
+    padding: 0.5em 0 0;
+}
+
+.author{
+    margin: 0.3em 0 0;
+    color: #5D5D5D;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.author:hover {
+    text-decoration: underline;
+}
+
+.albumName{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;    
+}
