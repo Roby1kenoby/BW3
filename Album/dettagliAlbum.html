@@ -3,10 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="albumStyle.css">
     <title>Dettagli Album</title>
 </head>
 <body>
-    <h1>questa è la pagina di dettaglio album</h1>
-    
+    <section id="sezione" class="d-flex">
+    <!-- sidebar di sinistra -->
+    <section id="side"></section>
+   
+    <!-- main -->
+     <section id="main">
+        <div id="sectionTitoloAlbum" class="d-flex justify-content-start pt-5 pb-3">
+            <div id="fotoAlbum"><img src="/Mockup/fotoAlbum.jpg" alt="coverAlbum" class="rounded ps-3"></div>
+            <div id="infoAlbum" class="d-flex flex-column pt-5 ps-3">
+                <h6>ALBUM</h6>
+                <h1 class="fw-bold pt-2">Gioventù Brucata</h1>
+                <div class="d-flex align-content-center pt-5">
+                    <img src="/Mockup/fotoArtista.jpg" alt="fotoArtista">
+                    <p class=" ps-2 pt-1"><span class="fw-bold">Pinguini Tattici Nucleari · 2017 · 12 brani, </span>53 min 20 sec.</p>
+                </div>
+            </div>
+        </div>
+        <div id="simboli" class="p-4">
+            <svg class="text-success me-2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+              </svg>
+            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+              </svg>
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+              </svg>
+              <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+              </svg>
+        </div>
+        <div id="listaBrani">
+            <table class="table table-dark table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TITOLO</th>
+                    <th scope="col">RIPRODUZIONI</th>
+                    <th scope="col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                      </svg></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="pt-3">1</th>
+                    <td><div>Montanelli - Intro</div><div>Pinguini Tattici Nucleari</div></td>
+                    <td class="pt-3">694.578</td>
+                    <td class="pt-3">1:28</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pt-3">2</th>
+                    <td><div>Sciare</div><div>Pinguini Tattici Nucleari</div></td>
+                    <td class="pt-3">5.585.178</td>
+                    <td class="pt-3">4:42</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="pt-3">3</th>
+                    <td><div>Gioventù Brucata</div><div>Pinguini Tattici Nucleari</div></td>
+                    <td class="pt-3">5:24</td>
+                    <td class="pt-3">3.412.342</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+     </section>
+     <!-- sidebar di destra -->
+     <section id="side2"></section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="albumScript.js"></script>  
 </body>
 </html>
