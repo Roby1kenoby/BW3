@@ -10,15 +10,15 @@ main{
     padding-left: 8%;
     padding-right: 8%;
 }
-
+/* NAV with buttons and user profile*/
 nav {
     padding: 1.5em 0;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
-nav button{
+#navButtonContainer button{
     border-radius: 50%;
     text-align: center;
     vertical-align: center;
@@ -28,17 +28,128 @@ nav button{
     border: none;
 }
 
-nav button svg{
+#navButtonContainer button svg{
     display: block;
     margin: auto;
-    font-size: large;
 }
 
-nav button svg:hover{
+#navButtonContainer button:hover > svg{
     fill: white;
 }
 
+#profileInfo{
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+}
 
+#profilePic{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    align-content: center;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #121212;
+}
+
+#profilePic img{
+    border-radius: 50%;
+}
+
+#profileName{
+    height: 35px;
+    background-color: #121212;
+    padding: 0.2em 0.5em 0;
+}
+
+#profileArrow{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #121212;
+}
+
+#profileArrow button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* HERO */
+
+#heroWrapper{
+    display: flex;
+    background: rgb(0,0,0);
+    background: linear-gradient(17deg, rgba(0,0,0,1) 20%, rgba(35,35,35,1) 60%);
+}
+
+#heroImg{
+    padding: 1em;
+}
+
+@media screen and (min-width: 1501px){
+    #heroInfos h1{
+        font-size: 4em;
+        text-wrap: nowrap;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1500px){
+    #heroInfos h1{
+        font-size: 3em;
+        text-wrap: nowrap;
+    }
+}
+
+@media screen and (width > 500px) and (width < 1000px){
+    #heroInfos h1{
+        font-size: 2em;
+        text-wrap: nowrap;
+    }
+}
+
+@media screen and (width < 500px){
+    #heroInfos h1{
+        font-size: 1em;
+        text-wrap: nowrap;
+    }
+}
+
+#heroInfos p{
+    margin: 0;
+    padding-top: 1em;
+}
+
+#heroButtons{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+#heroButtons button{
+    padding: 0.5em 1.5em;
+    border-radius: 500px;
+    margin-right: 1em;
+    margin-top: 3em;
+}
+
+#heroButtons button:nth-child(2){
+    background-color: black;
+    border: 1px solid #484848
+}
+
+#heroButtons button:nth-child(3){
+    background-color: transparent;
+    border: none;
+    
+}
+
+/* AUTHOR SECTION */
 .authorSection{
     display: flex;
     flex-direction: column;
@@ -61,8 +172,10 @@ nav button svg:hover{
 .vt{
     text-wrap: nowrap;
     text-align: end;
+    
 }
 
+/* CARDS */
 .cardContainer{
     display: flex;
     justify-content: center;
