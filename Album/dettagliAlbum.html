@@ -14,8 +14,40 @@
    
     <!-- main -->
      <section id="main">
-        <div id="sectionTitoloAlbum" class="d-flex justify-content-start pt-5 pb-3">
-            <div id="fotoAlbum"><img src="/Mockup/fotoAlbum.jpg" alt="coverAlbum" class="rounded ps-3"></div>
+      <div id="topMain">
+      <div id="nav" class="d-md-flex justify-content-between d-none">
+      <div id="navButtonContainer">
+        <button class="ms-3 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#969696"
+                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+        </button>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#969696"
+                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+        </button>
+    </div>
+    <div id="profileInfo" class="me-5 mt-2">
+      <div id="profilePic">
+          <img src="https://picsum.photos/30/30" alt="profilePic">
+      </div>
+      <div id="profileName">PatriPatti</div>
+      <div id="profileArrow">
+          <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+          </button>
+      </div>
+  </div>
+</div>
+        <div id="sectionTitoloAlbum" class="d-md-flex d-md-justify-content-start pt-4 pb-3 d-sm-block ">
+            <div id="fotoAlbum" class="text-sm-center"><img src="/Mockup/fotoAlbum.jpg" alt="coverAlbum" class="rounded ps-md-3"></div>
             <div id="infoAlbum" class="d-flex flex-column pt-5 ps-3">
                 <h6>ALBUM</h6>
                 <h1 class="fw-bold pt-2">Gioventù Brucata</h1>
@@ -25,6 +57,7 @@
                 </div>
             </div>
         </div>
+      </div>
         <div id="simboli" class="p-4">
             <svg class="text-success me-2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
@@ -39,14 +72,15 @@
                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
               </svg>
         </div>
-        <div id="listaBrani">
+      
+        <div id="listaBrani" class="ms-4 me-4">
             <table class="table table-dark table-borderless">
-                <thead>
+                <thead class="bordo">
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">TITOLO</th>
-                    <th scope="col">RIPRODUZIONI</th>
-                    <th scope="col"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;">#</th>
+                    <th scope="col" class="d-md-table-cell d-none accordion-item" style="--bs-text-opacity: .6;">TITOLO</th>
+                    <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;">RIPRODUZIONI</th>
+                    <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
                       </svg></th>
@@ -54,22 +88,22 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" class="pt-3">1</th>
-                    <td><div>Montanelli - Intro</div><div>Pinguini Tattici Nucleari</div></td>
-                    <td class="pt-3">694.578</td>
-                    <td class="pt-3">1:28</td>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">1</th>
+                    <td><div >Montanelli - Intro</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3 ">694.578</td>
+                    <td class="d-md-table-cell d-none pt-3">1:28</td>
                   </tr>
                   <tr>
-                    <th scope="row" class="pt-3">2</th>
-                    <td><div>Sciare</div><div>Pinguini Tattici Nucleari</div></td>
-                    <td class="pt-3">5.585.178</td>
-                    <td class="pt-3">4:42</td>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">2</th>
+                    <td><div>Sciare</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3">5.585.178</td>
+                    <td class="d-md-table-cell d-none pt-3">4:42</td>
                   </tr>
                   <tr>
-                    <th scope="row" class="pt-3">3</th>
-                    <td><div>Gioventù Brucata</div><div>Pinguini Tattici Nucleari</div></td>
-                    <td class="pt-3">5:24</td>
-                    <td class="pt-3">3.412.342</td>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">3</th>
+                    <td><div>Gioventù Brucata</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3">3.412.342</td>
+                    <td class="d-md-table-cell d-none pt-3">5:24</td>
                   </tr>
                 </tbody>
               </table>
