@@ -43,6 +43,12 @@ body {
   .sidebarParagrafo{
     display: flex;
     flex-direction: column;
+    
+  }
+  .sidebarParagrafo p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .sidebarParagrafoFooter{
