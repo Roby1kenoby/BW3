@@ -87,6 +87,10 @@ nav {
     background: linear-gradient(17deg, rgba(0,0,0,1) 20%, rgba(35,35,35,1) 60%);
 }
 
+#heroInfos {
+    width: 100%;
+}
+
 #heroImg{
     padding: 1em;
 }
@@ -134,19 +138,50 @@ nav {
 #heroButtons button{
     padding: 0.5em 1.5em;
     border-radius: 500px;
-    margin-right: 1em;
-    margin-top: 3em;
+    /* margin-right: 1em;
+    margin-top: 1em; */
+    margin: 1em 0 1em 0;
 }
 
 #heroButtons button:nth-child(2){
     background-color: black;
-    border: 1px solid #484848
+    border: 1px solid #484848;
+    margin-left: 1em;
 }
 
 #heroButtons button:nth-child(3){
     background-color: transparent;
     border: none;
     
+}
+
+/* BUONASERA */
+
+#buonasera h3{
+    margin: 0.5em 0;
+}
+
+#buonaseraWrapper{
+    border: 1px solid red;
+    height: 200px;
+}
+
+.miniContainer{
+    display: flex;
+}
+
+.mcImgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.mcImgContainer{
+    object-fit: cover;
+}
+
+.mcText {
+    width: 70%;
 }
 
 /* AUTHOR SECTION */
