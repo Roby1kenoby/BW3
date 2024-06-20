@@ -1,5 +1,7 @@
 main{
     background-image: linear-gradient(to bottom, #262626, #1e1e1e, #171717, #0d0d0d, #000000);
+    width: 66% !important;
+
 }
 
 .container{
