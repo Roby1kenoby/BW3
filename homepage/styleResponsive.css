@@ -1,0 +1,49 @@
+.footer{
+    background-color:rgb(30, 29, 29);
+    justify-content: space-between;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: aliceblue;
+}
+
+.library{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-right: 20px;
+    color: aliceblue;
+}
+
+.search{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: aliceblue;
+}
+/*parte sopra al footer  responsive */
+
+.start{
+    background-color: rgb(81, 79, 78);
+    border-radius: 10px;
+    height: 80px;
+    margin-top: 100px;
+}
+.startFoter{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15px;
+}
+.startFoterIcons{
+    color: white;
+}
