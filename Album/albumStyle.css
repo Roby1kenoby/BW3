@@ -4,7 +4,8 @@ body{
 }
 
 #main{
-    width: 75%;
+    width: 66.5%;
+    padding: 0 !important;
 }
 
 #topMain{
