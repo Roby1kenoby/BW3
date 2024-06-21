@@ -8,6 +8,12 @@ body{
     padding: 0 !important;
 }
 
+@media (max-width: 768px){
+    #main {
+        width: 100% !important;
+    }
+}
+
 /* #topMain{
    background: linear-gradient(#DCBE4E, #746429)
     /*  oppure #e66465, #9198e5*/
