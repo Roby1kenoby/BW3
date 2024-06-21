@@ -10,7 +10,7 @@ const sectionsArray = [
     'Popolare tra i tuoi amici',
     'Nuove uscite per te',
     'Consigliate per oggi',
-    'In base a cosa hai ascoltato di recente'
+    'In base a cosa hai ascoltato di recente',
 ]
 
 const artistsArray = [
