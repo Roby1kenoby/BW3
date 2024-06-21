@@ -1,0 +1,152 @@
+body {
+    background-color: #121212;
+    color: white;
+  }
+
+    /* SIDEBAR SX */
+
+  .sidebar {
+    background-color: #070707;
+    padding: 15px;
+    min-height: 100vh;
+  }
+  
+  .nav-link {
+    color: rgb(197, 195, 195) !important;
+  }
+
+  .nav-link:hover {
+    color: rgb(255, 255, 255) !important;
+  }
+
+
+  #search-field {
+    display: none;
+    margin-top: 10px;
+    }
+    
+    #album-list .nav-item img {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    #album-list .nav-item{
+      padding: 8px 0px 10px 4px;
+    }
+    
+    #album-list{
+      padding-bottom: 20px;
+    }
+
+  /* MAIN */
+
+  .main-content {
+    background-color: #121212;
+    padding: 20px;
+  }
+
+
+  /* FOOTER PLAYER SECTION */
+
+.bg-container {
+height: 5rem;
+background-color: #282828;
+}
+
+.playerControls .row {
+justify-content: center;
+}
+
+.playerControls a {
+width: 0;
+display: inline-block;
+margin: 0 10px;
+}
+
+.playerControls a img {
+width: 18px;
+color: #414141;
+}
+
+.playerControls a svg {
+color: #ffffff;
+}
+
+
+
+.progress {
+color: white;
+background-color: #414141;
+height: 3px;
+}
+
+.playBar p {
+margin-bottom: 20px;
+color: white;
+}
+
+.footer-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 10px 0 15px;
+}
+
+.footer-content .left-section {
+display: flex;
+align-items: center;
+padding-top: 14px;
+}
+
+.footer-content .left-section img {
+width: 50px;
+height: 50px;
+margin-right: 10px;
+}
+
+.footer-content .left-section ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+width: 135px;
+}
+
+.footer-content .left-section ul li {
+display: inline-block;
+margin-right: 10px;
+
+}
+
+.footer-content .left-section ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+.footer-content .right-section {
+display: flex;
+align-items: center;
+padding-top: 14px;
+
+}
+
+.footer-content .right-section a {
+width: 20px;
+height: 20px;
+margin-left: 10px;
+color: white;
+}
+
+.hr-footer {
+width: 80px;
+border: 2px solid;
+margin-bottom: 9px;
+margin-left: 8px;
+}
+
+#results > div > div > div > h5{
+  color: white;
+}
+
+#results > div > div > div > p{
+  color: rgb(165, 163, 163);
+}

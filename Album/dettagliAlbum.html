@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/homepage/sideStyle.css">
+  <link rel="stylesheet" href="/Album/albumStyle.css">
+  <link rel="stylesheet" href="/homepage/styledestra.css">
+
+  <title>Spotify Dettaglio Album</title>
+
+
+</head>
+
+<body>
+
+
+
+  <!-- Main -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Left -->
+      <div class="col-md-2 sidebar d-none d-md-block">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots"
+              viewBox="0 0 16 16">
+              <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+            </svg>
+            <a class="nav-link active px-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                fill="currentColor" class="bi bi-house-door-fill me-1" viewBox="0 0 16 16">
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+              </svg> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0" href="#" id="search-link"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-search me-1" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg> Cerca</a>
+            <div id="search-field">
+              <input type="text" class="form-control" placeholder="Cerca..." id="search-input">
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 mb-3" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-collection-play-fill me-1" viewBox="0 0 16 16">
+                <path
+                  d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437" />
+              </svg> La tua libreria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                fill="currentColor" class="bi bi-plus-square-fill me-1" viewBox="0 0 16 16">
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0" />
+              </svg> Crea playlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0" href="#"><img src="/homepage/img/love.png" width="18" height="18"
+                class="me-2">Brani che ti piacciono</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-0 " href="#"><img src="/homepage/img/save.png" width="18" height="18" class="me-2">I
+              tuoi episodi</a>
+          </li>
+        </ul>
+
+        <hr>
+        <ul class="nav flex-column" id="album-list">
+
+        </ul>
+
+      </div>
+      <!-- Main -->
+
+      <!-- <div class="col-md-8 main-content mb-5">
+        <h2>Main</h2>
+        <div class="row" id="results">
+          
+        </div>
+      </div> -->
+      <!-- main -->
+      <section id="main">
+        <div id="topMain">
+          <div id="nav" class="d-md-flex justify-content-between d-none">
+            <div id="navButtonContainer">
+              <button class="ms-3 mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#969696" class="bi bi-chevron-left"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </button>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#969696"
+                  class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </button>
+            </div>
+            <div id="profileInfo" class="me-5 mt-2">
+              <div id="profilePic">
+                <img src="https://picsum.photos/30/30" alt="profilePic">
+              </div>
+              <div id="profileName">PatriPatti</div>
+              <div id="profileArrow">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="sectionTitoloAlbum" class="d-md-flex d-md-justify-content-start pt-4 pb-3 d-sm-block ">
+            <div id="fotoAlbum" class="text-sm-center"><img id="fotoA" src="" alt="coverAlbum"
+                class="rounded ps-md-3"></div>
+            <div id="infoAlbum" class="d-flex flex-column pt-5 ps-3">
+              <h6>ALBUM</h6>
+              <h1 id="albumName" class="fw-bold pt-2"></h1>
+              <div class="d-flex align-content-center pt-5">
+                <img id="fotoArtista" src="" alt="fotoArtista">
+                <p class=" ps-2 pt-1"><span id="artistaAlbum" class="fw-bold">
+                   </span><!-- 53 min 20 sec. --></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="simboli" class="p-4">
+          <svg class="text-success me-2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+            class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+          </svg>
+          <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-suit-heart" viewBox="0 0 16 16">
+            <path
+              d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+          </svg>
+          <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+          </svg>
+          <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-three-dots" viewBox="0 0 16 16">
+            <path
+              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+          </svg>
+        </div>
+
+        <div id="listaBrani" class="ms-4 me-4">
+          <table class="table table-dark table-borderless">
+            <thead class="bordo">
+              <tr>
+                <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;">#</th>
+                <th scope="col" class="d-md-table-cell d-none accordion-item" style="--bs-text-opacity: .6;">TITOLO</th>
+                <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;">RIPRODUZIONI
+                </th>
+                <th scope="col" class="d-md-table-cell d-none text-white" style="--bs-text-opacity: .6;"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                    viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                  </svg></th>
+              </tr>
+            </thead>
+            <tbody id="tabellaCanzoni">
+              <!-- <tr>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">1</th>
+                    <td><div >Montanelli - Intro</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3 ">694.578</td>
+                    <td class="d-md-table-cell d-none pt-3">1:28</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">2</th>
+                    <td><div>Sciare</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3">5.585.178</td>
+                    <td class="d-md-table-cell d-none pt-3">4:42</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="d-md-table-cell d-none pt-3">3</th>
+                    <td><div>Gioventù Brucata</div><div class="text-white" style="--bs-text-opacity: .6;">Pinguini Tattici Nucleari</div></td>
+                    <td class="d-md-table-cell d-none pt-3">3.412.342</td>
+                    <td class="d-md-table-cell d-none pt-3">5:24</td>
+                  </tr> -->
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+
+      <!-- Right -->
+      <div class="col-md-2 sidebar d-none d-md-block">
+        <!-- <div class="col-md-2 sidebar"> -->
+          <div class="sidebarTop">
+              <h5 class="fs-3 fw-bold">Attività amici</h5>
+              <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-gear" viewBox="0 0 16 16">
+                      <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+                    </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                  </svg>
+             </div>
+          </div>
+          <div class="sidebarMain">
+              <div class="sidebarMain1">
+                  <div class="sidebarImg">
+                      <img src="https://picsum.photos/200/300" alt="opsss">
+                  </div>
+                  <div class="sidebarParagrafo">
+                      <h5>Charlie Hookham</h5>
+                      <p>In Camera Yumi Zouma</p>
+                      <div class="sidebarParagrafoFooter"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                              <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895"/>
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+                          </svg>
+                          <p class="ms-2">EPP III</p>
+                      </div> 
+                  </div>
+                  <div class="time">
+                      <p>4 ore</p>
+                  </div>
+              </div>
+              <div class="sidebarMain1">
+                  <div class="sidebarImg">
+                      <img src="https://picsum.photos/200/300?grayscale" alt="opsss">
+                  </div>
+                  <div class="sidebarParagrafo">
+                      <h5>Lightdark02</h5>
+                      <p>Aimed to kill jade Lemac</p>
+                      <div class="sidebarParagrafoFooter"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-0-circle" viewBox="0 0 16 16">
+                              <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895"/>
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+                          </svg>
+                          <p class="ms-2">Aimed to kill</p>
+                      </div> 
+                  </div>
+                  <div class="time">
+                      <p>9 ore</p>
+                  </div>
+              </div>
+              <div class="sidebarMain1">
+                  <div class="sidebarImg">
+                      <img src="https://picsum.photos/seed/picsum/200/300" alt="opsss">
+                  </div>
+                  <div class="sidebarParagrafo">
+                      <h5>Valeria Traversa</h5>
+                      <p>New Kings Sleeping Wolf</p>
+                      <div class="sidebarParagrafoFooter"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                              <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
+                              <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
+                              <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"/>
+                            </svg>
+                          <p class="ms-2">Twint Badass mood</p>
+                      </div> 
+                  </div>
+                  <div class="time">
+                      <p>3</p>
+                      <p>giorni</p>
+                  </div>
+              </div>
+              
+          </div>
+      <!-- </div>    -->
+      </div>
+    </div>
+  </div>
+
+  <!--NAVBAR FLEX-BOTTOM-->
+  <footer>
+    <div class="container-fluid fixed-bottom bg-container pt-1">
+      <div class="row">
+        <div class="col-lg-12 d-none d-lg-block">
+          <div class="row footer-content">
+            <!-- Left Section -->
+            <div class="col-4 col-md-4 col-lg-2 left-section">
+              <img src="/homepage/img/footer-img.jpg" alt="logo" />
+              <ul>
+                <li><a href="#">VIOLA (feat. Salmo)</a></li>
+                <li><a href="#">Fedez Salmo</a></li>
+              </ul>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                viewBox="0 0 16 16">
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+              </svg>
+            </div>
+            <!-- Center Section (Player Controls) -->
+            <div class="col-4 col-md-6 col-lg-6 playerControls mt-1">
+              <div class="row justify-content-center">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="green" class="bi bi-shuffle"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                    <path
+                      d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor"
+                    class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-skip-forward-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636C.693 12.703 0 12.324 0 11.693V4.308c0-.63.693-1.01 1.233-.696L7.5 7.248v-2.94c0-.63.693-1.01 1.233-.696L15 7.248V4a.5.5 0 0 1 .5-.5" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="green" class="bi bi-repeat"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- Right Section -->
+            <div class="col-4 col-md-4 col-lg-2 right-section d-flex justify-content-end">
+              <a href="#">
+                <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 dYnaPI" fill="grey">
+                  <path
+                    d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z">
+                  </path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-collection"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z" />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-pc-display"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z" />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="grey" class="bi bi-volume-down"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11M12.025 8a4.5 4.5 0 0 1-1.318 3.182L10 10.475A3.5 3.5 0 0 0 11.025 8 3.5 3.5 0 0 0 10 5.525l.707-.707A4.5 4.5 0 0 1 12.025 8" />
+                </svg>
+              </a>
+              <hr class="hr-footer">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="grey"
+                  class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707" />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+          <div class="row justify-content-center playBar">
+            <div class="col-8 col-md-6">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--END NAVBAR BOTTOM-->
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="/homepage/side.js"></script>
+  <script src="/Album/albumScript.js"></script>
+
+</body>
+
+</html>
