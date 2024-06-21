@@ -1,5 +1,6 @@
 main{
-    background-image: linear-gradient(to bottom, #262626, #1e1e1e, #171717, #0d0d0d, #000000);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 70%, rgba(35,35,35,1) 100%);
     width: 66% !important;
 
 }
@@ -8,9 +9,6 @@ main{
         width: 100% !important ;
     }
 }
-
-
-
 
 @media (max-width: 768px){
     main {
@@ -22,10 +20,7 @@ main{
     color: white;
 }
 
-.upperWrapper{
-    padding-left: 8%;
-    padding-right: 8%;
-}
+
 
 @media (max-width: 768px){
     .upperWrapper{
@@ -116,35 +111,48 @@ nav {
     width: 100%;
 }
 
-#heroImg{
+#heroTitle a{
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+#heroArtist a{
+    text-decoration: none;
+    color: white;
+}
+
+#heroImgWrapper{
     padding: 1em;
+    min-width: fit-content;
 }
 
 @media screen and (min-width: 1501px){
     #heroInfos h1{
         font-size: 4em;
-        text-wrap: nowrap;
+        
     }
 }
 
 @media screen and (min-width: 501px) and (max-width: 1500px){
     #heroInfos h1{
         font-size: 3em;
-        text-wrap: nowrap;
+        
     }
 }
 
 @media screen and (width > 500px) and (width < 1000px){
     #heroInfos h1{
         font-size: 2em;
-        text-wrap: nowrap;
+        
     }
 }
 
 @media screen and (width < 500px){
     #heroInfos h1{
         font-size: 1em;
-        text-wrap: nowrap;
+        
     }
 }
 
@@ -226,7 +234,7 @@ nav {
 
 /* AUTHOR SECTION */
 #sections{
-    padding: 0 8%;
+    padding: 0;
 }
 
 .authorSection{
@@ -260,11 +268,12 @@ nav {
 /* CARDS */
 .cardContainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .cardSpacer{
     padding: 0 0 1em;
+    flex-grow: 1;
 }
 
 .cardWrapper{
@@ -307,6 +316,9 @@ nav {
     color: #5D5D5D;
     font-weight: bold;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
     z-index: 1;
 }
 

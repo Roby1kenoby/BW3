@@ -1,6 +1,9 @@
 const searchUrl = 'https://striveschool-api.herokuapp.com/api/deezer/search?q='
-const trackUrl = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
+const albumUrl = 'https://striveschool-api.herokuapp.com/api/deezer/album/'
 const sectionsContainer = document.getElementById('sections')
+const heroTitle = document.getElementById('heroTitle')
+const heroArtist = document.getElementById('heroArtist')
+const heroImg = document.getElementById('heroImg')
 let albumsArray = []
 
 const sectionsArray = [
@@ -87,7 +90,7 @@ let createCard = function(album){
                 <div class="imgWrapper"><img src="${album.albumPicture}" class="img-fluid" alt="${album.albumTitle}"></div>
                 <div class="card-body">
                 <a href="../Album/dettagliAlbum.html?id=${album.albumId}" class="albumName">${album.albumTitle}</a>
-                <a href="../Autore/dettagliAutore.html?id=${album.artistId}" class="author">${album.artistName}</a>
+                <a href="../artista/artista.html?id=${album.artistId}" class="author">${album.artistName}</a>
                 </div>
             </div>
         </div>
@@ -126,10 +129,26 @@ let composePage = function(secArr){
     });
 }
 
+// function to complete the hero section
+let composeHero = function(){
+    let album = getRandomAlbum()
+    heroTitle.innerHTML = 
+    `
+    <a href="../Album/dettagliAlbum.html?id=${album.albumId}">${album.albumTitle}</a>
+    `
+    heroArtist.innerHTML = 
+    `
+    <a href="../artista/artista.html?id=${album.artistId}">${album.artistName}</a>
+    `
+    
+    heroImg.src = album.albumPicture
+}
 // fastLoad
 onload = async (e) => {
     await getAlbumsData(artistsArray)
+    composeHero()
     composePage(sectionsArray)
+    
 }
 
 
