@@ -58,8 +58,24 @@ let getAlbumData = function(id){
     })
 }
 
+function getRandomColor() {// funzione per generare colore random
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
+function applicaRandomGradient(divId) { //funzione per applicare il colore generato randomicamente
+    let color1 = getRandomColor();
+    let color2 = getRandomColor();
+    let gradient = `linear-gradient( ${color1}, ${color2})`;
+    let div = document.getElementById(divId);
+    div.style.background = gradient;
 
+}
+applicaRandomGradient("topMain"); //applico il gradiente al div con id topMain
 
 // let ordinaRespose = function(oggetto){
 //     let oggettoFormattato = {

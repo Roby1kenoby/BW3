@@ -8,10 +8,10 @@ body{
     padding: 0 !important;
 }
 
-#topMain{
+/* #topMain{
    background: linear-gradient(#DCBE4E, #746429)
     /*  oppure #e66465, #9198e5*/
-}
+/* } */ 
 
 #side{
     width: 15%;
@@ -45,7 +45,7 @@ body{
     vertical-align: center;
     width: 30px;
     height: 30px;
-    background-color: #746429;
+    background-color: #121212;
     border: none;
 }
 
