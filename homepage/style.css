@@ -202,7 +202,7 @@ nav {
     }
 }
 
-.mcImgContainer{
+.mcImgContainer img{
     object-fit: cover;
 }
 
@@ -211,6 +211,10 @@ nav {
 } */
 
 /* AUTHOR SECTION */
+#sections{
+    padding: 0 8%;
+}
+
 .authorSection{
     display: flex;
     flex-direction: column;
@@ -222,19 +226,22 @@ nav {
 .titleWrapper{
     display: flex;
     justify-content: space-between;
-    padding-right: 8%;
+    align-items: center;
+    
 }
 
 .title{
-    padding-left: 9%;
+    
     margin-bottom: 0;
 }
 
 .vt{
     text-wrap: nowrap;
-    text-align: end;
-    
+    margin: 0;
+    color: gray;
 }
+
+
 
 /* CARDS */
 .cardContainer{
@@ -258,8 +265,6 @@ nav {
 .cardWrapper:hover{
     background-color: #1E1A1A;
 }
-
-
 
 .card{
     border-radius: 0.5em;
@@ -298,5 +303,8 @@ nav {
 .albumName{
     text-decoration: none;
     color: white;
-    font-weight: bolder;    
+    font-weight: bolder; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }
