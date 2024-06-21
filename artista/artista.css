@@ -1,0 +1,431 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.song-details a {
+    margin-left: 10px;
+}
+
+.artist-header {
+    background-size: cover;
+    background-position: center;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    color: white;
+    position: relative;
+    padding: 20px;
+}
+
+.artist-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .bi {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+header p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+main i.bi {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.song-section h3 {
+    margin-top: 20px;
+}
+
+
+nav button{
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #131313;
+    border: none;
+}
+
+nav button i{
+    display: block;
+    margin: auto;
+}
+
+nav button:hover > i{
+    fill: white;
+}
+#profileInfo{
+ 
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+}
+
+#profilePic{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    align-content: center;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #121212;
+}
+
+#profilePic img{
+    border-radius: 50%;
+}
+
+#profileName{
+    height: 35px;
+    background-color: #121212;
+    padding: 0.2em 0.5em 0;
+}
+
+#profileArrow{
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    align-content: center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #121212;
+}
+
+#profileArrow button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+#play {
+    font-size: 3rem;
+}
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+   
+}
+
+.song-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.song-title {
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.show-more {
+    cursor: pointer;
+    margin-top: 20px;
+    color:gray;
+}
+
+.show-more:hover {
+    text-decoration: underline;
+}
+.song-rank,
+.song-duration {
+    margin-left: 10px;
+}
+
+.bi-three-dots-vertical {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .song-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .song-cover {
+        margin-right: 10px;
+    }
+    .song-title {
+        margin-left: 10px;
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+   
+    .song-rank {
+        display: block;
+        font-size: 0.8em;
+        color: gray;
+        margin-top: 5px; 
+    }
+
+    .song-duration {
+        display: none;
+    }
+
+    .bi-three-dots-vertical {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .song-item {
+        align-items: center;
+    }
+    .liked-songs,
+    .song-section {
+        width: 100%;
+        order: 2;
+    }
+
+    .liked-songs {
+        order: 1;
+    }
+    .following-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .following-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left-icons, .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .three-dots-horizontal, .left-icons .rounded-circle {
+        display: none;
+    }
+
+    .three-dots-vertical, .shuffle-icon, .right-icons .rounded-circle {
+        display: inline;
+    }
+
+    .left-icons {
+        justify-content: flex-start;
+    }
+
+    .right-icons {
+        justify-content: flex-end;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .following-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .following-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-icons, .right-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+    }
+
+    .three-dots-horizontal {
+        display: inline;
+    }
+
+    .three-dots-vertical, .shuffle-icon, .right-icons .rounded-circle {
+        display: none;
+    }
+}
+
+
+    
+    
+
+@media (max-width: 992px) {
+    #liked-songs {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .artist-info {
+        margin-bottom: 1rem;
+    }
+
+    .d-flex.flex-column.ms-3 h5 {
+        font-size: 1rem;
+    }
+
+    #liked-songs .d-lg-none {
+        display: block;
+    }
+
+    #liked-songs .d-lg-block {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) {
+    #liked-songs .d-lg-none {
+        display: none;
+    }
+
+    #liked-songs .d-lg-block {
+        display: block;
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .artist-info {
+        text-align: left; 
+    }
+
+    #monthly-listeners {
+        position: static;
+        margin-top: 10px; 
+    }
+    
+    .col-9 {
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start; 
+    }
+    
+    .col-3 {
+        text-align: right;
+    }
+    
+    #profileName {
+        font-size: 1.2rem;
+    }
+    
+    #profileArrow {
+        display: block; 
+    }
+    
+    #profilePic {
+        display: block; 
+        margin-left: auto;
+    }
+    
+    .verified {
+        display: flex; 
+        align-items: center; 
+    }
+    
+    .verified i {
+        margin-right: 5px; 
+    }
+    
+    .arrows {
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start;
+    }
+    
+    .arrows button {
+        margin-right: 10px; 
+    }
+  
+}
+@media (max-width: 767.98px) {
+  
+    .artist-header {
+        padding: 20px 0;
+        background-size: cover;
+        background-position: center;
+      
+    }
+
+    .artist-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #artist-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    #monthly-listeners {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-top: 5px;
+    }
+
+    #profilePic {
+        display: none; 
+    }
+
+    #profileName {
+       display:none;
+    }
+
+    #profileArrow {
+        display: none; 
+    }
+
+    .verified {
+        display: none; 
+    }
+
+    #monthly-listeners {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .arrows {
+        display:none;
+    }
+}
