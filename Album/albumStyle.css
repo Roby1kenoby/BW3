@@ -113,3 +113,9 @@ body{
     }
 }
 
+@media(max-width: 576px){
+    #fotoAlbum{
+        text-align: center !important;
+    }
+}
+

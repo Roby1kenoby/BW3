@@ -15,16 +15,31 @@
   .sidebarTop{
     display: flex;
     justify-content: space-between;
+    /* width:200px; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* border:1px solid; */
+    text-overflow: ellipsis;
   }
   .sidebarMain{
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+    /* width:200px; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* border:1px solid; */
+    text-overflow: ellipsis;
     }
     .sidebarMain1{
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+        /* width:200px; */
+        white-space: nowrap;
+        overflow: hidden;
+        /* border:1px solid; */
+        text-overflow: ellipsis;
     }
 
   
@@ -37,6 +52,11 @@
   .sidebarParagrafo{
     display: flex;
     flex-direction: column;
+    /* width:200px; */
+    white-space: nowrap;
+    overflow: hidden;
+    /* border:1px solid; */
+    text-overflow: ellipsis;
     
   }
   .sidebarParagrafo p{
@@ -50,10 +70,20 @@
     
 }
 
+.titoloSide{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .time{
     margin-left: 10px;
     display:flex;
     justify-content: space-between;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 .time p{
     margin-right: 5px;
