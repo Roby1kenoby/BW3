@@ -36,12 +36,15 @@ let getAlbumData = function(id){
         artist.innerHTML = data.artist.name + " · 2017 · " + formattaDurataAlbum + " · " + data.nb_tracks + " brani"
         albumName.innerHTML = data.title
         data.tracks.data.forEach((element, i) => {
-            //console.log(element)
+            console.log(element.id)
         let durataTraccia = convertiDurata(element.duration)
         let formattaDurataTraccia = `${durataTraccia.minuti}:${durataTraccia.secondiRimanenti}`
         tableBody.innerHTML += `<tr>
                     <th scope="row" class="d-md-table-cell d-none pt-3">${i+1}</th>
-                    <td><div>${element.title}</div><div class="text-white" style="--bs-text-opacity: .6;">${element.artist.name}</div></td>
+                    <td><div>${element.title}</div><div class="text-white" style="--bs-text-opacity: .6;"><a href="../artista/artista.html?id=${element.id}">${element.artist.name}</a></div>
+                   
+                    </td>
+                     
                     <td class="d-md-table-cell d-none pt-3 ">${element.rank}</td>
                     <td class="d-md-table-cell d-none pt-3">${formattaDurataTraccia}</td>
                   </tr>`

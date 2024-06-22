@@ -320,6 +320,7 @@ nav {
     overflow: hidden;
     text-overflow: ellipsis; 
     z-index: 1;
+    
 }
 
 .author:hover {
