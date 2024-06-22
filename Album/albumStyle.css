@@ -119,3 +119,22 @@ body{
     }
 }
 
+.artista{
+    text-decoration: none;
+    color: #5D5D5D;
+    font-weight: bold;
+}
+
+.artista:hover{
+    text-decoration: underline;
+}
+
+.artista2{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.artista2:hover{
+    text-decoration: underline;
+}
