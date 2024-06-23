@@ -178,6 +178,7 @@ nav button:hover > i{
     .song-cover {
         margin-right: 10px;
     }
+    
     .song-title {
         margin-left: 10px;
         white-space: wrap;
@@ -263,7 +264,17 @@ nav button:hover > i{
         justify-content: center;
         align-items: center;
     }
-
+    .song-title-rank {
+        display: flex;
+        justify-content: space-between;
+       width:80%;
+    }
+    .song-rank, .song-order{
+        color:gray;
+    }
+    .song-duration{
+        color:gray;
+    }
     .left-icons, .right-icons {
         display: flex;
         align-items: center;
