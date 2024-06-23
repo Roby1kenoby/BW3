@@ -5,11 +5,10 @@ let id = "";
 document.addEventListener("DOMContentLoaded", async () => {
     let params = new URLSearchParams(location.search);
     id = params.get("id");
-
     if (id) {
         await fetchArtistAndSongs(id);
     } else {
-        console.error('ID non trovato');
+        console.error('ID non trovato nell\'URL');
     }
 });
 
@@ -37,7 +36,7 @@ async function fetchArtistAndSongs(artistId) {
         if (songs.length > 5) {
             const showMoreButton = document.createElement('div');
             showMoreButton.classList.add('show-more');
-            showMoreButton.textContent = 'Visualizza altro';
+            showMoreButton.textContent = 'VISUALIZZA ALTRO';
             showMoreButton.addEventListener('click', () => {
                 renderSongs(songs);
                 showMoreButton.style.display = 'none';
@@ -79,7 +78,7 @@ function renderSongs(songs) {
         songTitle.textContent = song.title;
         songTitleRank.appendChild(songTitle);
 
-        const songRank = document.createElement('span');
+        const songRank = document.createElement('div');
         songRank.classList.add('song-rank');
         songRank.textContent = ` ${song.rank}`;
         songTitleRank.appendChild(songRank);
@@ -105,7 +104,7 @@ function formatDuration(seconds) {
     return `${minutes}:${(seconds % 60).toString().padStart(2, '0')}`;
 }
 
-document.getElementById('search-button').addEventListener('click', () => {
+document.getElementById('search-link').addEventListener('click', () => {
     const artistName = document.getElementById('search-input').value.trim();
     if (artistName) fetchArtistAndSongsByName(artistName);
 });
