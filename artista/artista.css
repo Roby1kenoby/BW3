@@ -4,7 +4,7 @@ main{
 
 @media (max-width: 768px){
     main {
-        width: 100% !important;
+        width: 90% !important;
     }
 }
 
@@ -308,7 +308,6 @@ nav button:hover > i{
     #liked-songs {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .artist-info {
@@ -417,12 +416,6 @@ nav button:hover > i{
         margin-bottom: 5px;
     }
 
-    #monthly-listeners {
-        font-size: 1rem;
-        color: #6c757d;
-        margin-top: 5px;
-    }
-
     #profilePic {
         display: none; 
     }
@@ -441,10 +434,13 @@ nav button:hover > i{
 
     #monthly-listeners {
         position: absolute;
-        bottom: -30px;
+        bottom: -40px;
         left: 0;
         width: 100%;
         text-align: left;
+        font-size: 1rem;
+        color:gray;
+        
     }
     .arrows {
         display:none;
